@@ -26,20 +26,21 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <h4>Edit Slides:</h4>
-            <!-- TODO: Render this in edit mode only -->
-            <div class="card card-body border-primary">
-                <ul>
-                @foreach(var item in List) {
-                    var content = item.Content;
-                    <li @Edit.TagToolbar(content)>@content.Title</li>
-                }
-                </ul>
+    @if (Globals.IsEditMode()) {
+        <div class="row mt-3">
+            <div class="col">
+                <div class="card card-body border-primary">
+                    <h5 class="card-title">Edit Slides:</h5>
+                    <ul>
+                        @foreach(var item in List) {
+                            var content = item.Content;
+                            <li @Edit.TagToolbar(content)>@content.Title</li>
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    }
 </div>
 
 <!-- data links -->
