@@ -54,7 +54,7 @@
             data-youtube="@content.YouTubeVideoId"
             data-poster='@("http://img.youtube.com/vi/" + content.YouTubeVideoId + "/maxresdefault.jpg")'
             data-description="@content.Description"
-            data-background-color="@content.BackgroundColor">
+            data-info-pane-style="@content.InfoPaneStyle">
         </a>
     }
     else {
@@ -62,7 +62,7 @@
             data-poster="@content.Poster?h=419"
             title="@content.Title"
             data-description="@content.Description"
-            data-background-color="@content.BackgroundColor">
+            data-info-pane-style="@content.InfoPaneStyle">
         </a>
     }
 }
@@ -86,9 +86,14 @@ $(document).ready(function() {
             node[0].innerHTML = "<a href='" + moreUrl + "' target='_blank'>" + moreLabel + "</a>"
           }
           
-          var bgColor = this.list[index].getAttribute('background-color');
+          var infoPaneStyle = this.list[index].getAttribute('data-info-pane-style');
           var slideInfoPane = $(this.container).parent().parent().find('.slide-info');
-          slideInfoPane.attr ("style", "background-color:" + bgColor);
+          if (infoPaneStyle) {
+            slideInfoPane.attr ("style", infoPaneStyle);
+          }
+          else {
+            slideInfoPane.attr ("style", "");
+          }
           
           var title = this.list[index].getAttribute('title');
           var slideInfoTitle = $(this.container).parent().parent().find('.slide-info-title');

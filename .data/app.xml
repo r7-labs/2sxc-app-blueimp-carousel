@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.04.00" ExportDate="2020-09-02T14:04:57.8526387+03:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.04.00" ExportDate="2020-09-02T15:36:50.7831405+03:00">
   <Header>
     <App Guid="8bad63b7-eb1b-4a9b-9a93-5b7ab55f3db9" />
     <Language Default="en-US" />
@@ -150,17 +150,11 @@
             </Value>
           </Entity>
         </Attribute>
-        <Attribute StaticName="BackgroundColor" Type="String" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="c078f373-2d66-448a-95ed-e9b34159c05d" Json="True" KeyNumber="538">
-            <Value Key="InputType" Value="string-default" Type="String">
-              <Dimension DimensionID="0" ReadOnly="false" />
-            </Value>
-            <Value Key="Name" Value="BackgroundColor" Type="String">
-              <Dimension DimensionID="0" ReadOnly="false" />
-            </Value>
-            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
-              <Dimension DimensionID="0" ReadOnly="false" />
-            </Value>
+        <Attribute StaticName="InfoPaneStyle" Type="String" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="636fbc0a-009c-4f69-807b-7589930e75c0" Json="True" KeyNumber="547">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="InfoPaneStyle" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
         </Attribute>
       </Attributes>
@@ -265,14 +259,125 @@
         <Dimension DimensionID="3" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="67d6f693-6ff2-4216-9060-104122beb9e1" AttributeSetName="CarouselSlide" EntityGUID="dbb60efc-47d8-4204-b59f-b6772538c691">
+      <Value Key="Description" Value="&lt;p&gt;Slide 1 description&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&quot;btn btn-outline-secondary btn-block&quot; href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;More info...&lt;/a&gt;&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:368" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="InfoPaneStyle" Value="background-color:#fc7" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="MoreLink" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="MoreLinkLabel" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Poster" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Slide 1" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="YouTubeVideoId" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="67d6f693-6ff2-4216-9060-104122beb9e1" AttributeSetName="CarouselSlide" EntityGUID="b7c5a5d9-d88d-403b-8ae9-ad4b598fe443">
+      <Value Key="Description" Value="&lt;p&gt;Slide 2 description&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:369" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="MoreLink" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="MoreLinkLabel" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Poster" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Slide 2" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="YouTubeVideoId" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="67d6f693-6ff2-4216-9060-104122beb9e1" AttributeSetName="CarouselSlide" EntityGUID="9b2aa61a-6c5a-4991-afad-ecd9b5427123">
+      <Value Key="Description" Value="&lt;p&gt;Slide 3 description&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:370" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="MoreLink" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="MoreLinkLabel" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Poster" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Slide 3" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="YouTubeVideoId" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="67d6f693-6ff2-4216-9060-104122beb9e1" AttributeSetName="CarouselSlide" EntityGUID="dd0844bc-b191-47bc-b526-fe5674c2a919">
+      <Value Key="Description" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="MoreLink" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="MoreLinkLabel" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Poster" Value="" Type="Hyperlink">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Slide 4 (YouTube)" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+      <Value Key="YouTubeVideoId" Value="3GwjfUFyY6M" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+    </Entity>
   </Entities>
-  <PortalFiles />
+  <PortalFiles>
+    <File Id="368" RelativePath="adam\Carousel\_A6229hHBEK1n7Z3JTjGkQ\Image\slide1.jpg" />
+    <File Id="369" RelativePath="adam\Carousel\2aXFt43YO0CK6a1LWY_kQw\Image\slide2.jpg" />
+    <File Id="370" RelativePath="adam\Carousel\GqYqm1pskUmvrezZtUJxIw\Image\slide3.jpg" />
+  </PortalFiles>
   <PortalFolders>
+    <Folder Id="166" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/Image/" />
+    <Folder Id="170" RelativePath="adam/Carousel/2aXFt43YO0CK6a1LWY_kQw/Image/" />
+    <Folder Id="174" RelativePath="adam/Carousel/GqYqm1pskUmvrezZtUJxIw/Image/" />
     <Folder Id="132" RelativePath="adam/Carousel/" />
+    <Folder Id="164" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/" />
+    <Folder Id="165" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/MoreLink/" />
+    <Folder Id="167" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/Poster/" />
+    <Folder Id="168" RelativePath="adam/Carousel/2aXFt43YO0CK6a1LWY_kQw/" />
+    <Folder Id="171" RelativePath="adam/Carousel/2aXFt43YO0CK6a1LWY_kQw/MoreLink/" />
+    <Folder Id="169" RelativePath="adam/Carousel/2aXFt43YO0CK6a1LWY_kQw/Poster/" />
     <Folder Id="139" RelativePath="adam/Carousel/acf2LG9k8kqP_Z34Gdp4WA/" />
     <Folder Id="140" RelativePath="adam/Carousel/acf2LG9k8kqP_Z34Gdp4WA/Image/" />
     <Folder Id="141" RelativePath="adam/Carousel/acf2LG9k8kqP_Z34Gdp4WA/MoreLink/" />
     <Folder Id="142" RelativePath="adam/Carousel/acf2LG9k8kqP_Z34Gdp4WA/Poster/" />
+    <Folder Id="172" RelativePath="adam/Carousel/GqYqm1pskUmvrezZtUJxIw/" />
+    <Folder Id="175" RelativePath="adam/Carousel/GqYqm1pskUmvrezZtUJxIw/MoreLink/" />
+    <Folder Id="173" RelativePath="adam/Carousel/GqYqm1pskUmvrezZtUJxIw/Poster/" />
     <Folder Id="143" RelativePath="adam/Carousel/k7KgOWjHKkeo2CSea5eoWw/" />
     <Folder Id="144" RelativePath="adam/Carousel/k7KgOWjHKkeo2CSea5eoWw/Image/" />
     <Folder Id="145" RelativePath="adam/Carousel/k7KgOWjHKkeo2CSea5eoWw/MoreLink/" />
@@ -280,6 +385,10 @@
     <Folder Id="133" RelativePath="adam/Carousel/MeoHdHYEHUij5vstyGptBA/" />
     <Folder Id="134" RelativePath="adam/Carousel/MeoHdHYEHUij5vstyGptBA/Image/" />
     <Folder Id="135" RelativePath="adam/Carousel/MeoHdHYEHUij5vstyGptBA/Poster/" />
+    <Folder Id="176" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/" />
+    <Folder Id="178" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/Image/" />
+    <Folder Id="179" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/MoreLink/" />
+    <Folder Id="177" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/Poster/" />
     <Folder Id="136" RelativePath="adam/Carousel/XAxVpCB_l0qOJIS83aS7Dg/" />
     <Folder Id="137" RelativePath="adam/Carousel/XAxVpCB_l0qOJIS83aS7Dg/Image/" />
     <Folder Id="138" RelativePath="adam/Carousel/XAxVpCB_l0qOJIS83aS7Dg/Poster/" />
