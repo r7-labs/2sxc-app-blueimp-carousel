@@ -43,8 +43,7 @@
     }
 </div>
 
-<!-- data links -->
-<div class="hidden" id="carousel-links-@Dnn.Module.ModuleID">
+<div class="hidden" id="carousel-data-links-@Dnn.Module.ModuleID">
 @foreach(var item in List) {
     var content = item.Content;
     
@@ -72,7 +71,7 @@
 <script>
 $(document).ready(function() {
   blueimp.Gallery(
-    document.getElementById('carousel-links-@Dnn.Module.ModuleID').getElementsByTagName('a'),
+    document.getElementById('carousel-data-links-@Dnn.Module.ModuleID').getElementsByTagName('a'),
     {
         container: '#blueimp-gallery-carousel-@Dnn.Module.ModuleID',
         carousel: true,
