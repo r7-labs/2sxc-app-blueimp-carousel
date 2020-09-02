@@ -1,0 +1,35 @@
+.carousel .blueimp-gallery-carousel {
+  box-shadow:none;
+  margin:0;
+  /*border-radius:.25rem*/
+}
+.carousel .blueimp-gallery > .more {
+  position:absolute;
+  bottom:5px;
+  left:15px;
+  display:block;
+  opacity:0.4;
+  background-color:#000;
+  border: 3px solid #fff;
+  border-radius:.25rem;
+  padding:8px;
+}
+.carousel .blueimp-gallery > .more:hover {
+  opacity: 0.6;
+}
+.carousel .blueimp-gallery > .more a {
+  color:#fff;
+  font-weight:bold
+}
+.carousel .blueimp-gallery-controls > .more {
+  display:block
+}
+.carousel .blueimp-gallery > .indicator > li {
+    width: 32px;
+    height: 32px;
+}
+.carousel .slide-info {
+    background-color: #efe;
+    padding: .5rem 1rem;
+    height: 100%;
+}

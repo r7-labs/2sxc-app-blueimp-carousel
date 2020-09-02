@@ -1,0 +1,112 @@
+@using System;
+@using System.Collections;
+@using System.Linq;
+@using System.Text.RegularExpressions;
+@using DotNetNuke.Common;
+@using ToSic.SexyContent;
+
+<link rel="stylesheet" href="@App.Path/_carousel.css" />
+
+<div class="carousel">
+    <div class="row no-gutters">
+        <div class="col-sm-12 col-md-8">
+            <div class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls" id="blueimp-gallery-carousel">
+                <div class="slides">&nbsp;</div>
+                <h3 class="title">&nbsp;</h3>
+                <a class="prev">&lsaquo;</a> <a class="next">&rsaquo;</a>
+                <ol class="indicator">
+                </ol>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="slide-info">
+                <h3 class="slide-info-title"></h3>
+                <p class="slide-info-description"></p>
+                <p class="more">&nbsp;</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h4>Edit Slides:</h4>
+            <!-- TODO: Render this in edit mode only -->
+            <div class="card card-body border-primary">
+                <ul>
+                @foreach(var item in List) {
+                    var content = item.Content;
+                    <li @Edit.TagToolbar(content)>@content.Title</li>
+                }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- data links -->
+<div class="hidden" id="links">
+@foreach(var item in List) {
+    var content = item.Content;
+    
+    if (!string.IsNullOrEmpty (@content.YouTubeVideoId)) {
+        <a href='@("https://www.youtube.com/watch?v=" + content.YouTubeVideoId)'
+            type="text/html"
+            title="@content.Title"
+            data-youtube="@content.YouTubeVideoId"
+            data-poster='@("http://img.youtube.com/vi/" + content.YouTubeVideoId + "/maxresdefault.jpg")'
+            data-description="@content.Description"
+            data-background-color="@content.BackgroundColor">
+        </a>
+    }
+    else {
+        <a href="@content.Image?h=419"
+            data-poster="@content.Poster?h=419"
+            title="@content.Title"
+            data-description="@content.Description"
+            data-background-color="@content.BackgroundColor">
+        </a>
+    }
+}
+
+    <!--
+    <a data-more-label="Канал медиацентра на YouTube" data-more-url="http://www.youtube.com/channel/UCYPMmQknVPxosuY4iPCfVDg" data-poster="/Portals/0/20/200901/falkov_vn.jpg" data-youtube="s1tvfsQk7aQ" href="https://www.youtube.com/watch?v=s1tvfsQk7aQ" title="Поздравление министра науки и высшего образования РФ Валерия Фалькова с Днем знаний" type="text/html">&nbsp;</a> <a data-more-label="Подробнее…" data-more-url="http://www.volgau.com/tabid/344" href="/Portals/0/20/200805/slide_kursy_2020.jpg" title="">&nbsp;</a> <a data-more-label="Подробнее…" data-more-url="http://www.volgau.com/tabid/17182" href="/Portals/0/Images/carousel/agronti_2020.jpg" title="">&nbsp;</a> <a data-more-label="Канал медиацентра на YouTube" data-more-url="http://www.youtube.com/channel/UCYPMmQknVPxosuY4iPCfVDg" data-poster="http://img.youtube.com/vi/C81QIu5sSCc/maxresdefault.jpg" data-youtube="C81QIu5sSCc" href="https://www.youtube.com/watch?v=C81QIu5sSCc" title="ВолГАУ реализует картофель" type="text/html">&nbsp;</a> <a data-more-label="Канал медиацентра на YouTube" data-more-url="http://www.youtube.com/channel/UCYPMmQknVPxosuY4iPCfVDg" data-poster="http://img.youtube.com/vi/Er_UTrfp1_o/maxresdefault.jpg" data-youtube="Er_UTrfp1_o" href="https://www.youtube.com/watch?v=Er_UTrfp1_o" title="ВолГАУ 75" type="text/html">&nbsp;</a><a data-more-label="Канал медиацентра на YouTube" data-more-url="http://www.youtube.com/channel/UCYPMmQknVPxosuY4iPCfVDg" data-poster="http://www.volgau.com/Portals/0/Images/carousel/promo_volgau_2019.jpg" data-youtube="f-y3ydNpuM8" href="https://www.youtube.com/watch?v=f-y3ydNpuM8" title="Промо ВолГАУ 2019" type="text/html">&nbsp;</a> <a data-more-label="Подробнее" data-more-url="http://www.volgau.com/LinkClick.aspx?link=12494" href="/Portals/0/Images/carousel/slide_osetr.jpg" title="">&nbsp;</a> <a data-more-label="Подробнее" data-more-url="http://www.volgau.com/izvestiya" href="/portals/0/images/carousel/slide_izvestiya_auk.jpg" title="">&nbsp;</a>
+    -->
+
+</div>
+
+
+    
+<script>
+$(document).ready(function() {
+  blueimp.Gallery(
+    document.getElementById('links').getElementsByTagName('a'),
+    {
+        container: '#blueimp-gallery-carousel',
+        carousel: true,
+      	slideshowInterval: 6000,
+      	onslide: function (index, slide) {
+          var moreUrl = this.list[index].getAttribute('data-more-url'),
+            moreLabel = this.list[index].getAttribute('data-more-label'),
+            node = this.container.find('.more');
+          
+          node.empty();
+          if (moreUrl && moreLabel) {
+            node[0].innerHTML = "<a href='" + moreUrl + "' target='_blank'>" + moreLabel + "</a>"
+          }
+          
+          var bgColor = this.list[index].getAttribute('background-color');
+          var slideInfoPane = $(this.container).parent().parent().find('.slide-info');
+          slideInfoPane.attr ("style", "background-color:" + bgColor);
+          
+          var title = this.list[index].getAttribute('title');
+          var slideInfoTitle = $(this.container).parent().parent().find('.slide-info-title');
+          slideInfoTitle.text (title);
+          
+          var descr = this.list[index].getAttribute('data-description');
+          var slideInfoDescr = $(this.container).parent().parent().find('.slide-info-description');
+          slideInfoDescr.text (descr);
+          
+        }
+    }
+);
+});
+</script>
