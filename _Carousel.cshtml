@@ -10,7 +10,7 @@
 <div class="carousel">
     <div class="row no-gutters">
         <div class="col-sm-12 col-md-8">
-            <div class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls" id="blueimp-gallery-carousel-@Dnn.Module.ModuleID">
+            <div class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls" id="carousel_@Dnn.Module.ModuleID">
                 <div class="slides">&nbsp;</div>
                 <h3 class="title">&nbsp;</h3>
                 <a class="prev">&lsaquo;</a>
@@ -43,7 +43,7 @@
     }
 </div>
 
-<div class="hidden" id="carousel-data-links-@Dnn.Module.ModuleID">
+<div class="hidden" id="carouselDataLinks_@Dnn.Module.ModuleID">
 @foreach(var item in List) {
     var content = item.Content;
     
@@ -71,9 +71,9 @@
 <script>
 $(document).ready(function() {
   blueimp.Gallery(
-    document.getElementById('carousel-data-links-@Dnn.Module.ModuleID').getElementsByTagName('a'),
+    document.getElementById('carouselDataLinks_@Dnn.Module.ModuleID').getElementsByTagName('a'),
     {
-        container: '#blueimp-gallery-carousel-@Dnn.Module.ModuleID',
+        container: '#carousel_' + @Dnn.Module.ModuleID,
         carousel: true,
       	slideshowInterval: 6000,
       	onslide: function (index, slide) {
