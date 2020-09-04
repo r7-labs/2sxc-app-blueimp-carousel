@@ -33,3 +33,11 @@
     padding: .5rem 1rem;
     height: 100%;
 }
+.carousel .slide-more {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:1rem;
+  background-color:rgba(0,0,0,.1);
+}

@@ -22,7 +22,9 @@
             <div class="slide-info">
                 <h3 class="slide-info-title"></h3>
                 <p class="slide-info-description"></p>
-                <p class="more">&nbsp;</p>
+                <div class="slide-more">
+                    <a class="btn btn-outline-secondary btn-block slide-more-link" href="#"></a>
+                </div>
             </div>
         </div>
     </div>
@@ -57,7 +59,10 @@
             data-youtube="@content.YouTubeVideoId"
             data-poster='@("http://img.youtube.com/vi/" + content.YouTubeVideoId + "/maxresdefault.jpg")'
             data-description="@content.Description"
-            data-info-pane-style="@content.InfoPaneStyle">
+            data-info-pane-style="@content.InfoPaneStyle"
+            data-more-link="@content.MoreLink"
+            data-more-link-label="@content.MoreLinkLabel"
+            data-more-link-target="@content.MoreLinkTarget"> 
         </a>
     }
     else {
@@ -65,7 +70,10 @@
             data-poster="@content.Poster?h=419"
             title="@content.Title"
             data-description="@content.Description"
-            data-info-pane-style="@content.InfoPaneStyle">
+            data-info-pane-style="@content.InfoPaneStyle"
+            data-more-link="@content.MoreLink"
+            data-more-link-label="@content.MoreLinkLabel"
+            data-more-link-target="@content.MoreLinkTarget">
         </a>
     }
 }
@@ -80,32 +88,46 @@ $(document).ready(function() {
         carousel: true,
       	slideshowInterval: 6000,
       	onslide: function (index, slide) {
-          var moreUrl = this.list[index].getAttribute('data-more-url'),
-            moreLabel = this.list[index].getAttribute('data-more-label'),
-            node = this.container.find('.more');
-          
-          node.empty();
-          if (moreUrl && moreLabel) {
-            node[0].innerHTML = "<a href='" + moreUrl + "' target='_blank'>" + moreLabel + "</a>"
-          }
-          
-          var infoPaneStyle = this.list[index].getAttribute('data-info-pane-style');
+          var content = {
+            title: this.list[index].getAttribute('title'),
+            description: this.list[index].getAttribute('data-description'),
+            infoPaneStyle: this.list[index].getAttribute('data-info-pane-style'),
+            moreLink: this.list[index].getAttribute('data-more-link'),
+            moreLinkLabel: this.list[index].getAttribute('data-more-link-label'),
+            moreLinkTarget: this.list[index].getAttribute('data-more-link-target')
+          };
+
           var slideInfoPane = $(this.container).parent().parent().find('.slide-info');
-          if (infoPaneStyle) {
-            slideInfoPane.attr ("style", infoPaneStyle);
+          if (content.infoPaneStyle) {
+            slideInfoPane.attr ("style", content.infoPaneStyle);
           }
           else {
             slideInfoPane.attr ("style", "");
           }
-          
-          var title = this.list[index].getAttribute('title');
+                    
           var slideInfoTitle = $(this.container).parent().parent().find('.slide-info-title');
-          slideInfoTitle.text (title);
-          
-          var descr = this.list[index].getAttribute('data-description');
+          slideInfoTitle.text (content.title);
+                    
           var slideInfoDescr = $(this.container).parent().parent().find('.slide-info-description');
-          slideInfoDescr.html (descr);
-          
+          slideInfoDescr.html (content.description);
+
+          var slideMoreLink = $(this.container).parent().parent().find('.slide-more-link');
+          if (content.moreLink) {  
+            slideMoreLink.attr ("href", content.moreLink);
+            if (content.moreLinkLabel) {
+                slideMoreLink.text (content.moreLinkLabel);
+            }
+            else {
+                 slideMoreLink.text ("More info...");
+            }
+            if (content.moreLinkTarget) {
+                slideMoreLink.attr ("target", content.moreLinkTarget);
+            }
+            slideMoreLink.parent().show(); 
+          }
+          else {
+            slideMoreLink.parent().hide();
+          }
         }
     }
 );
