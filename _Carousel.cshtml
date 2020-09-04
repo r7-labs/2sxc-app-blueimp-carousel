@@ -28,9 +28,12 @@
     </div>
     @if (Globals.IsEditMode()) {
         <div class="row mt-3">
-            <div class="col">
+            <div class="col-6">
                 <div class="card card-body border-primary">
-                    <h5 class="card-title">Edit Slides:</h5>
+                    <h5 class="card-title">Edit carousel:</h5>
+                    <p @Edit.Toolbar(ListContent)></p>
+                    <hr />
+                    <h6>Edit slides:</h6>
                     <ul>
                         @foreach(var item in List) {
                             var content = item.Content;

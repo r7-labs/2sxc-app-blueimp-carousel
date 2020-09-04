@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.04.00" ExportDate="2020-09-02T15:36:50.7831405+03:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.04.00" ExportDate="2020-09-04T13:19:43.0190984+03:00">
   <Header>
     <App Guid="8bad63b7-eb1b-4a9b-9a93-5b7ab55f3db9" />
     <Language Default="en-US" />
@@ -13,6 +13,17 @@
     </AttributeSet>
     <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
       <Attributes />
+    </AttributeSet>
+    <AttributeSet StaticName="352c5b66-067d-45a4-a595-9ee70eb0aa35" Name="Carousel" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+      <Attributes>
+        <Attribute StaticName="Title" Type="String" IsTitle="true">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="55973534-26bb-4b13-93b4-9dd7293997cb" Json="True" KeyNumber="548">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Title" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+      </Attributes>
     </AttributeSet>
     <AttributeSet StaticName="67d6f693-6ff2-4216-9060-104122beb9e1" Name="CarouselSlide" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
       <Attributes>
@@ -214,7 +225,10 @@
         <Dimension DimensionID="0" ReadOnly="false" />
         <Dimension DimensionID="3" ReadOnly="false" />
       </Value>
-      <Value Key="ListContentTypeStaticName" Value="" Type="String">
+      <Value Key="ListContentDemoEntity" Value="3090b5e6-0913-45c0-94a0-f71fa4337514" Type="Entity">
+        <Dimension DimensionID="0" ReadOnly="false" />
+      </Value>
+      <Value Key="ListContentTypeStaticName" Value="352c5b66-067d-45a4-a595-9ee70eb0aa35" Type="String">
         <Dimension DimensionID="0" ReadOnly="false" />
         <Dimension DimensionID="3" ReadOnly="false" />
       </Value>
@@ -292,6 +306,9 @@
       <Value Key="Image" Value="file:369" Type="Hyperlink">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
+      <Value Key="InfoPaneStyle" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
       <Value Key="MoreLink" Value="" Type="Hyperlink">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
@@ -354,6 +371,16 @@
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="352c5b66-067d-45a4-a595-9ee70eb0aa35" AttributeSetName="Carousel" EntityGUID="3090b5e6-0913-45c0-94a0-f71fa4337514">
+      <Value Key="Title" Value="Carousel Demo" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="352c5b66-067d-45a4-a595-9ee70eb0aa35" AttributeSetName="Carousel" EntityGUID="16220b15-ba0e-4197-ad6a-1a9a1989f3fe">
+      <Value Key="Title" Value="Carousel 1" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
+    </Entity>
   </Entities>
   <PortalFiles>
     <File Id="368" RelativePath="adam\Carousel\_A6229hHBEK1n7Z3JTjGkQ\Image\slide1.jpg" />
@@ -368,6 +395,10 @@
     <Folder Id="164" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/" />
     <Folder Id="165" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/MoreLink/" />
     <Folder Id="167" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/Poster/" />
+    <Folder Id="188" RelativePath="adam/Carousel/_Vf5NAvZOkeYI6X8QOCjLA/" />
+    <Folder Id="191" RelativePath="adam/Carousel/_Vf5NAvZOkeYI6X8QOCjLA/Image/" />
+    <Folder Id="190" RelativePath="adam/Carousel/_Vf5NAvZOkeYI6X8QOCjLA/MoreLink/" />
+    <Folder Id="189" RelativePath="adam/Carousel/_Vf5NAvZOkeYI6X8QOCjLA/Poster/" />
     <Folder Id="168" RelativePath="adam/Carousel/2aXFt43YO0CK6a1LWY_kQw/" />
     <Folder Id="171" RelativePath="adam/Carousel/2aXFt43YO0CK6a1LWY_kQw/MoreLink/" />
     <Folder Id="169" RelativePath="adam/Carousel/2aXFt43YO0CK6a1LWY_kQw/Poster/" />
@@ -385,6 +416,14 @@
     <Folder Id="133" RelativePath="adam/Carousel/MeoHdHYEHUij5vstyGptBA/" />
     <Folder Id="134" RelativePath="adam/Carousel/MeoHdHYEHUij5vstyGptBA/Image/" />
     <Folder Id="135" RelativePath="adam/Carousel/MeoHdHYEHUij5vstyGptBA/Poster/" />
+    <Folder Id="184" RelativePath="adam/Carousel/PcA9gjEB3kKW1aZdxl6Fnw/" />
+    <Folder Id="187" RelativePath="adam/Carousel/PcA9gjEB3kKW1aZdxl6Fnw/Image/" />
+    <Folder Id="185" RelativePath="adam/Carousel/PcA9gjEB3kKW1aZdxl6Fnw/MoreLink/" />
+    <Folder Id="186" RelativePath="adam/Carousel/PcA9gjEB3kKW1aZdxl6Fnw/Poster/" />
+    <Folder Id="180" RelativePath="adam/Carousel/PIi2U6OoAESnvvaWaHNfNw/" />
+    <Folder Id="183" RelativePath="adam/Carousel/PIi2U6OoAESnvvaWaHNfNw/Image/" />
+    <Folder Id="182" RelativePath="adam/Carousel/PIi2U6OoAESnvvaWaHNfNw/MoreLink/" />
+    <Folder Id="181" RelativePath="adam/Carousel/PIi2U6OoAESnvvaWaHNfNw/Poster/" />
     <Folder Id="176" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/" />
     <Folder Id="178" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/Image/" />
     <Folder Id="179" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/MoreLink/" />
