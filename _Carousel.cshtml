@@ -88,46 +88,46 @@ $(document).ready(function() {
 			carousel: true,
 			slideshowInterval: 6000,
 			onslide: function (index, slide) {
-			var content = {
-				title: this.list[index].getAttribute('title'),
-				description: this.list[index].getAttribute('data-description'),
-				infoPaneStyle: this.list[index].getAttribute('data-info-pane-style'),
-				moreLink: this.list[index].getAttribute('data-more-link'),
-				moreLinkLabel: this.list[index].getAttribute('data-more-link-label'),
-				moreLinkTarget: this.list[index].getAttribute('data-more-link-target')
-			};
+				var content = {
+					title: this.list[index].getAttribute('title'),
+					description: this.list[index].getAttribute('data-description'),
+					infoPaneStyle: this.list[index].getAttribute('data-info-pane-style'),
+					moreLink: this.list[index].getAttribute('data-more-link'),
+					moreLinkLabel: this.list[index].getAttribute('data-more-link-label'),
+					moreLinkTarget: this.list[index].getAttribute('data-more-link-target')
+				};
 
-			var slideInfoPane = $(this.container).parent().parent().find('.slide-info');
-			if (content.infoPaneStyle) {
-				slideInfoPane.attr ("style", content.infoPaneStyle);
-			}
-			else {
-				slideInfoPane.attr ("style", "");
-			}
-
-			var slideInfoTitle = $(this.container).parent().parent().find('.slide-info-title');
-			slideInfoTitle.text (content.title);
-
-			var slideInfoDescr = $(this.container).parent().parent().find('.slide-info-description');
-			slideInfoDescr.html (content.description);
-
-			var slideMoreLink = $(this.container).parent().parent().find('.slide-more-link');
-			if (content.moreLink) {
-				slideMoreLink.attr ("href", content.moreLink);
-				if (content.moreLinkLabel) {
-					slideMoreLink.text (content.moreLinkLabel);
+				var slideInfoPane = $(this.container).parent().parent().find('.slide-info');
+				if (content.infoPaneStyle) {
+					slideInfoPane.attr ("style", content.infoPaneStyle);
 				}
 				else {
-					slideMoreLink.text ("More info...");
+					slideInfoPane.attr ("style", "");
 				}
-				if (content.moreLinkTarget) {
-					slideMoreLink.attr ("target", content.moreLinkTarget);
+
+				var slideInfoTitle = $(this.container).parent().parent().find('.slide-info-title');
+				slideInfoTitle.text (content.title);
+
+				var slideInfoDescr = $(this.container).parent().parent().find('.slide-info-description');
+				slideInfoDescr.html (content.description);
+
+				var slideMoreLink = $(this.container).parent().parent().find('.slide-more-link');
+				if (content.moreLink) {
+					slideMoreLink.attr ("href", content.moreLink);
+					if (content.moreLinkLabel) {
+						slideMoreLink.text (content.moreLinkLabel);
+					}
+					else {
+						slideMoreLink.text ("More info...");
+					}
+					if (content.moreLinkTarget) {
+						slideMoreLink.attr ("target", content.moreLinkTarget);
+					}
+					slideMoreLink.parent().show();
 				}
-				slideMoreLink.parent().show();
-			}
-			else {
-				slideMoreLink.parent().hide();
-			}
+				else {
+					slideMoreLink.parent().hide();
+				}
 			}
 		}
 	);
