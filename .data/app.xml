@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.04.00" ExportDate="2020-09-04T13:57:49.0943262+03:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.04.00" ExportDate="2020-09-07T12:08:47.4971786+03:00">
   <Header>
     <App Guid="8bad63b7-eb1b-4a9b-9a93-5b7ab55f3db9" />
     <Language Default="en-US" />
@@ -66,20 +66,7 @@
             </Value>
           </Entity>
         </Attribute>
-        <Attribute StaticName="Poster" Type="Hyperlink" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="2b424866-6268-4259-b738-82b2d47efbfe" Json="True" KeyNumber="534">
-            <Value Key="InputType" Value="hyperlink-default" Type="String">
-              <Dimension DimensionID="0" ReadOnly="false" />
-            </Value>
-            <Value Key="Name" Value="Poster" Type="String">
-              <Dimension DimensionID="0" ReadOnly="false" />
-            </Value>
-            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
-              <Dimension DimensionID="0" ReadOnly="false" />
-            </Value>
-          </Entity>
-        </Attribute>
-        <Attribute StaticName="YouTubeVideoId" Type="String" IsTitle="false">
+        <Attribute StaticName="YouTubeId" Type="String" IsTitle="false">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a4f431a2-fd64-4628-b091-bc898df8697b" Json="True" KeyNumber="535">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="0" ReadOnly="false" />
@@ -100,7 +87,7 @@
             <Value Key="InputType" Value="string-default" Type="String">
               <Dimension DimensionID="0" ReadOnly="false" />
             </Value>
-            <Value Key="Name" Value="YouTubeVideoId" Type="String">
+            <Value Key="Name" Value="YouTubeId" Type="String">
               <Dimension DimensionID="0" ReadOnly="false" />
             </Value>
             <Value Key="Notes" Value="" Type="String">
@@ -299,13 +286,10 @@
       <Value Key="MoreLinkTarget" Value="_blank" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
-      <Value Key="Poster" Value="" Type="Hyperlink">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
       <Value Key="Title" Value="Slide 1" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
-      <Value Key="YouTubeVideoId" Value="" Type="String">
+      <Value Key="YouTubeId" Value="" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
     </Entity>
@@ -325,13 +309,10 @@
       <Value Key="MoreLinkLabel" Value="" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
-      <Value Key="Poster" Value="" Type="Hyperlink">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
       <Value Key="Title" Value="Slide 2" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
-      <Value Key="YouTubeVideoId" Value="" Type="String">
+      <Value Key="YouTubeId" Value="" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
     </Entity>
@@ -348,13 +329,10 @@
       <Value Key="MoreLinkLabel" Value="" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
-      <Value Key="Poster" Value="" Type="Hyperlink">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
       <Value Key="Title" Value="Slide 3" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
-      <Value Key="YouTubeVideoId" Value="" Type="String">
+      <Value Key="YouTubeId" Value="" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
     </Entity>
@@ -365,19 +343,22 @@
       <Value Key="Image" Value="" Type="Hyperlink">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
+      <Value Key="InfoPaneStyle" Value="" Type="String">
+        <Dimension DimensionID="4" ReadOnly="false" />
+      </Value>
       <Value Key="MoreLink" Value="" Type="Hyperlink">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
       <Value Key="MoreLinkLabel" Value="" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
-      <Value Key="Poster" Value="" Type="Hyperlink">
+      <Value Key="MoreLinkTarget" Value="" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Slide 4 (YouTube)" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
-      <Value Key="YouTubeVideoId" Value="3GwjfUFyY6M" Type="String">
+      <Value Key="YouTubeId" Value="3GwjfUFyY6M" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
     </Entity>

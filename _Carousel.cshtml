@@ -51,16 +51,16 @@
 <div class="hidden" id="carouselDataLinks_@Dnn.Module.ModuleID">
 @foreach(var item in List) {
 	var content = item.Content;
-	if (!string.IsNullOrEmpty (@content.YouTubeVideoId)) {
+	if (!string.IsNullOrEmpty (@content.YouTubeId)) {
 
-		var videoPoster = !string.IsNullOrEmpty (content.Poster)
-			? content.Poster + "?h=419"
-			: "http://img.youtube.com/vi/" + content.YouTubeVideoId + "/maxresdefault.jpg";
+		var videoPoster = !string.IsNullOrEmpty (content.Image)
+			? content.Image + "?h=419"
+			: "http://img.youtube.com/vi/" + content.YouTubeId + "/maxresdefault.jpg";
 
-		<a href='@("https://www.youtube.com/watch?v=" + content.YouTubeVideoId)'
+		<a href='@("https://www.youtube.com/watch?v=" + content.YouTubeId)'
 			type="text/html"
 			title="@content.Title"
-			data-youtube="@content.YouTubeVideoId"
+			data-youtube="@content.YouTubeId"
 			data-poster="@videoPoster"
 			data-description="@content.Description"
 			data-info-pane-style="@content.InfoPaneStyle"
