@@ -53,15 +53,16 @@
 	var content = item.Content;
 	if (!string.IsNullOrEmpty (@content.YouTubeId)) {
 
-		var videoPoster = !string.IsNullOrEmpty (content.Image)
+		var ytThumbnail = !string.IsNullOrEmpty (content.YouTubeThumbnail) ? content.YouTubeThumbnail : "maxresdefault";
+		var ytPoster = !string.IsNullOrEmpty (content.Image)
 			? content.Image + "?h=419"
-			: "http://img.youtube.com/vi/" + content.YouTubeId + "/maxresdefault.jpg";
+			: "http://img.youtube.com/vi/" + content.YouTubeId + "/" + ytThumbnail + ".jpg";
 
 		<a href='@("https://www.youtube.com/watch?v=" + content.YouTubeId)'
 			type="text/html"
 			title="@content.Title"
 			data-youtube="@content.YouTubeId"
-			data-poster="@videoPoster"
+			data-poster="@ytPoster"
 			data-description="@content.Description"
 			data-info-pane-style="@content.InfoPaneStyle"
 			data-more-link="@content.MoreLink"
