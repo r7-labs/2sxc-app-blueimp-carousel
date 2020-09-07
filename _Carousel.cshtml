@@ -10,11 +10,17 @@
 <div class="carousel">
 	<div class="row no-gutters">
 		<div class="col-sm-12 col-md-8">
-			<div class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls" id="carousel_@Dnn.Module.ModuleID">
-				<div class="slides">&nbsp;</div>
-				<h3 class="title">&nbsp;</h3>
-				<a class="prev">&lsaquo;</a>
-				<a class="next">&rsaquo;</a>
+			<div class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls"
+					id="carousel_@Dnn.Module.ModuleID"
+					aria-label="Image carousel">
+				<div class="slides" aria-live="off"></div>
+				<h3 class="title"></h3>
+				<a class="prev"
+					aria-controls="carousel_@Dnn.Module.ModuleID"
+					aria-label="Previous slide">&lsaquo;</a>
+				<a class="next"
+					aria-controls="carousel_@Dnn.Module.ModuleID"
+					aria-label="Next slide">&rsaquo;</a>
 				<ol class="indicator"></ol>
 			</div>
 		</div>
