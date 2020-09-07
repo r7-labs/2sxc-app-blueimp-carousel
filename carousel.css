@@ -23,10 +23,6 @@
 .carousel .blueimp-gallery-controls > .more {
 	display:block
 }
-.carousel .blueimp-gallery > .indicator > li {
-	width: 32px;
-	height: 32px;
-}
 .carousel .slide-info {
 	background-color: #eee;
 	padding: .5rem 1rem;
