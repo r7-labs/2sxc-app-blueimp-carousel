@@ -30,18 +30,17 @@
 	</div>
 	@if (Globals.IsEditMode()) {
 		<div class="row mt-3">
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="card card-body border-primary">
 					<h5 class="card-title">Edit carousel:</h5>
 					<p @Edit.Toolbar(ListContent)></p>
 					<hr />
-					<h6>Edit slides:</h6>
-					<ul>
-						@foreach(var item in List) {
-							var content = item.Content;
-							<li @Edit.TagToolbar(content)>@content.Title</li>
-						}
-					</ul>
+					@foreach(var item in List) {
+						var content = item.Content;
+						<div class="card card-body mb-3">
+							<div @Edit.TagToolbar(content)>@content.Title</div>
+						</div>
+					}
 				</div>
 			</div>
 		</div>
