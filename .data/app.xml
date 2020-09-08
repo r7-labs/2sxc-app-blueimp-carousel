@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.04.00" ExportDate="2020-09-07T15:48:50.4490801+03:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.04.00" ExportDate="2020-09-08T14:25:28.3724177+03:00">
   <Header>
     <App Guid="8bad63b7-eb1b-4a9b-9a93-5b7ab55f3db9" />
     <Language Default="en-US" />
@@ -553,7 +553,7 @@
         <Dimension DimensionID="4" ReadOnly="false" />
         <Dimension DimensionID="3" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="00.01.00" Type="String">
+      <Value Key="Version" Value="01.00.00" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
     </Entity>
@@ -642,7 +642,7 @@
       </Value>
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="67d6f693-6ff2-4216-9060-104122beb9e1" AttributeSetName="CarouselSlide" EntityGUID="dbb60efc-47d8-4204-b59f-b6772538c691">
-      <Value Key="Description" Value="&lt;p&gt;Slide 1 description&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&quot;btn btn-outline-secondary btn-block&quot; href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;More info...&lt;/a&gt;&lt;/p&gt;" Type="String">
+      <Value Key="Description" Value="&lt;p&gt;Slide 1 description&lt;/p&gt;&#xA;&lt;p&gt;You can put some HTML here...&lt;/p&gt;" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
       <Value Key="Image" Value="file:368" Type="Hyperlink">
@@ -693,26 +693,6 @@
         <Dimension DimensionID="4" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="67d6f693-6ff2-4216-9060-104122beb9e1" AttributeSetName="CarouselSlide" EntityGUID="9b2aa61a-6c5a-4991-afad-ecd9b5427123">
-      <Value Key="Description" Value="&lt;p&gt;Slide 3 description&lt;/p&gt;" Type="String">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
-      <Value Key="Image" Value="file:370" Type="Hyperlink">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
-      <Value Key="MoreLink" Value="" Type="Hyperlink">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
-      <Value Key="MoreLinkLabel" Value="" Type="String">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
-      <Value Key="Title" Value="Slide 3" Type="String">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
-      <Value Key="YouTubeId" Value="" Type="String">
-        <Dimension DimensionID="4" ReadOnly="false" />
-      </Value>
-    </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="67d6f693-6ff2-4216-9060-104122beb9e1" AttributeSetName="CarouselSlide" EntityGUID="dd0844bc-b191-47bc-b526-fe5674c2a919">
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="4" ReadOnly="false" />
@@ -756,12 +736,10 @@
   <PortalFiles>
     <File Id="368" RelativePath="adam\Carousel\_A6229hHBEK1n7Z3JTjGkQ\Image\slide1.jpg" />
     <File Id="369" RelativePath="adam\Carousel\2aXFt43YO0CK6a1LWY_kQw\Image\slide2.jpg" />
-    <File Id="370" RelativePath="adam\Carousel\GqYqm1pskUmvrezZtUJxIw\Image\slide3.jpg" />
   </PortalFiles>
   <PortalFolders>
     <Folder Id="166" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/Image/" />
     <Folder Id="170" RelativePath="adam/Carousel/2aXFt43YO0CK6a1LWY_kQw/Image/" />
-    <Folder Id="174" RelativePath="adam/Carousel/GqYqm1pskUmvrezZtUJxIw/Image/" />
     <Folder Id="132" RelativePath="adam/Carousel/" />
     <Folder Id="164" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/" />
     <Folder Id="165" RelativePath="adam/Carousel/_A6229hHBEK1n7Z3JTjGkQ/MoreLink/" />
@@ -777,9 +755,9 @@
     <Folder Id="140" RelativePath="adam/Carousel/acf2LG9k8kqP_Z34Gdp4WA/Image/" />
     <Folder Id="141" RelativePath="adam/Carousel/acf2LG9k8kqP_Z34Gdp4WA/MoreLink/" />
     <Folder Id="142" RelativePath="adam/Carousel/acf2LG9k8kqP_Z34Gdp4WA/Poster/" />
-    <Folder Id="172" RelativePath="adam/Carousel/GqYqm1pskUmvrezZtUJxIw/" />
-    <Folder Id="175" RelativePath="adam/Carousel/GqYqm1pskUmvrezZtUJxIw/MoreLink/" />
-    <Folder Id="173" RelativePath="adam/Carousel/GqYqm1pskUmvrezZtUJxIw/Poster/" />
+    <Folder Id="198" RelativePath="adam/Carousel/jGnHNurAE0-XfeEE3CeGYg/" />
+    <Folder Id="200" RelativePath="adam/Carousel/jGnHNurAE0-XfeEE3CeGYg/Icon/" />
+    <Folder Id="199" RelativePath="adam/Carousel/jGnHNurAE0-XfeEE3CeGYg/Link/" />
     <Folder Id="143" RelativePath="adam/Carousel/k7KgOWjHKkeo2CSea5eoWw/" />
     <Folder Id="144" RelativePath="adam/Carousel/k7KgOWjHKkeo2CSea5eoWw/Image/" />
     <Folder Id="145" RelativePath="adam/Carousel/k7KgOWjHKkeo2CSea5eoWw/MoreLink/" />
@@ -795,6 +773,9 @@
     <Folder Id="183" RelativePath="adam/Carousel/PIi2U6OoAESnvvaWaHNfNw/Image/" />
     <Folder Id="182" RelativePath="adam/Carousel/PIi2U6OoAESnvvaWaHNfNw/MoreLink/" />
     <Folder Id="181" RelativePath="adam/Carousel/PIi2U6OoAESnvvaWaHNfNw/Poster/" />
+    <Folder Id="195" RelativePath="adam/Carousel/Vdy-ahTNCUKQnFHsNYeQYg/" />
+    <Folder Id="196" RelativePath="adam/Carousel/Vdy-ahTNCUKQnFHsNYeQYg/Image/" />
+    <Folder Id="197" RelativePath="adam/Carousel/Vdy-ahTNCUKQnFHsNYeQYg/MoreLink/" />
     <Folder Id="176" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/" />
     <Folder Id="178" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/Image/" />
     <Folder Id="179" RelativePath="adam/Carousel/vEQI3ZGxvEe1Jv5WdMKpGQ/MoreLink/" />
