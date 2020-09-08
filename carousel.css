@@ -1,9 +1,16 @@
-.carousel .blueimp-gallery-carousel {
+.carousel .blueimp-gallery {
 	box-shadow:none;
 	margin:0;
 }
-.carousel .blueimp-gallery-carousel .title {
+.carousel .blueimp-gallery .title {
 	display:none;
+}
+.carousel .blueimp-gallery > .indicator > li {
+	width:32px;
+	height:16px;
+}
+.carousel .blueimp-gallery > .indicator > li::after {
+	display: none;
 }
 .carousel .slide-info {
 	background-color: #eee;
