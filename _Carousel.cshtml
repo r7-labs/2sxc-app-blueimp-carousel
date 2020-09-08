@@ -36,17 +36,20 @@
 	</div>
 	@if (Globals.IsEditMode()) {
 		<div class="row mt-3">
-			<div class="col-md-6">
-				<div class="card card-body border-primary">
-					<p @Edit.Toolbar(ListContent)></p>
-					<hr />
-					@foreach(var item in List) {
-						var content = item.Content;
-						<div class="card card-body mb-3">
-							<div @Edit.TagToolbar(content)>@content.Title</div>
-						</div>
-					}
-				</div>
+			<div class="col">
+				<p @Edit.Toolbar(ListContent)></p>
+				<hr />
+				<table class="table table-bordered table-hover table-striped">
+					<tbody>
+						@foreach(var item in List) {
+							var content = item.Content;
+							<tr>
+								<td>@content.Title</td>
+								<td>@Edit.Toolbar(content)</td>
+							</tr>
+						}
+					</tbody>
+				</table>
 			</div>
 		</div>
 	}
