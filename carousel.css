@@ -17,6 +17,9 @@
 	padding: 1rem;
 	height: 100%;
 }
+.carousel .slide-info-title {
+    word-break: break-word;
+}
 .carousel .slide-more {
 	width:100%;
 }
